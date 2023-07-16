@@ -1,4 +1,27 @@
 <%- include('../partials/header') %>
 
 <h2>We got this!</h2>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>From</th>
+      <th>To</th>
+	  <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% trips.forEach(function(trip) { %>
+      <tr>
+        <td><%= trip.name %></td>
+        <td><%= trip.from %></td>
+		<td><%= trip.to %></td>
+        <td><a href="/trips/<%= trip._id %>">DETAILS</a></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+
 <%- include('../partials/footer') %>

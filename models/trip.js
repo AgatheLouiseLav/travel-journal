@@ -1,18 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const siteSchema = new Schema({
-		name: {type: String, required: true}
-},{
-  timestamps: true
-});
-
 const countrySchema = new Schema({
-	name: { type: String, required: true },
-	date: { type: Number, required: true},
-	sites: [siteSchema],
-	knowledgeEarn: String,
-	image: String
+	name: String,
+	from: Date, 
+	to: Date,
+	learn: String,
+	image: String,
+	sites: String
 }, {
   timestamps: true
 });
