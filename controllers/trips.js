@@ -1,4 +1,5 @@
 const Trip = require('../models/trip');
+const Friend = require('../models/friend')
 
 async function index(req, res) {
   const trips = await Trip.find({});
@@ -8,7 +9,8 @@ async function index(req, res) {
 async function show(req, res) {
   try {
     const trip = await Trip.findById(req.params.id);
-    res.render('trips/show', { title: 'Trip Details', trip });
+    const friends = await Friend.find({trip: trip._id})
+    res.render('trips/show', { title: 'Trip Details', trip, friends });
   } catch (err) {
     console.log(err);
     res.redirect('/trips');

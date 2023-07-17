@@ -3,12 +3,59 @@
 <section>
   <div>Country </div>
   <div><%= trip.name %></div>
+  <br>
   <div>From: </div>
-  <div><%= trip.from %></div>
+  <div><%= trip.from.toLocaleDateString() %></div>
+  <br>
   <div>To: </div>
-  <div><%= trip.to %></div>
+  <div><%= trip.to.toLocaleDateString() %></div>
+  <br>
   <div>What I've learned: </div>
   <div><%= trip.learn %></div>
+
+  <a href="/trips/<%= trip.id %>/edit">Edit Trip</a>
+  <form 
+      action="/trips/<%= trip.id %>?_method=DELETE" 
+      method="POST"
+      >
+      <button type="submit">Delete this Trip</button>
+  </form>
 </section>
+
+<br><br>
+
+<table>
+  <h3>Friends</h3>
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Picture</th>
+    </tr>
+  </thead>
+  <tbody >
+    <% friends.forEach(function(friend) { %>
+    <tr>
+      <td><%= friend.name %></td>
+      <td><%= friend.email %></td>
+      <td><%= friend.picture %></td>
+    </tr>
+     <% }) %>
+  </tbody>
+</table>
+<br><br>
+
+<form action="/trips/<%= trip._id %>/friends" method="POST">
+	<label>Friend:</label>
+	<input type="text" name="name">
+  <br>
+	<label>Email:</label>
+	<input type="text" name="email">
+  <br>
+	<label>Picture:</label>
+	<input type="text" name="picture">
+  <br>
+	<button type="submit">Add a friend</button>
+</form>
 
 <%- include('../partials/footer') %>
