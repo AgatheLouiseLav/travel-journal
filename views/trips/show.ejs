@@ -10,10 +10,15 @@
   <div>To: </div>
   <div><%= trip.to.toLocaleDateString() %></div>
   <br>
+   <div>To: </div>
+  <div><%= trip.sites %></div>
+  <br>
   <div>What I've learned: </div>
   <div><%= trip.learn %></div>
 
+  <br><br>
   <a href="/trips/<%= trip.id %>/edit">Edit Trip</a>
+  <br><br>
   <form 
       action="/trips/<%= trip.id %>?_method=DELETE" 
       method="POST"

@@ -34,9 +34,42 @@ async function create(req, res) {
   }
 }
 
+async function update(req, res) {
+  try {
+    const trip = await Trip.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect(`/trips/${req.params.id}`);
+  } catch {
+    console.log(err);
+  }	
+};
+
+async function edit(req, res) {
+  try{
+    const trip = await Trip.findById(req.params.id);
+	  res.render('trips/edit',{
+		title: 'Edit Trip!!!!!!',
+		trip
+	});
+  } catch {
+    console.log(err)
+  }
+};
+
+async function deleteTrip(req, res) {
+  try{
+    await Trip.findByIdAndDelete(req.params.id);
+	  res.redirect('/trips')
+  }catch{
+    console.log(err)
+  }
+};
+
 module.exports = {
   index,
   new: newTrip,
   create,
-  show
+  show,
+  edit,
+  update,
+  delete: deleteTrip
 };

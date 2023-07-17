@@ -20,8 +20,19 @@ async function getFriends(req, res){
    res.render('/trips/:id', { trip, friends });
 }
 
+async function show(req, res) {
+  try {
+    const friends = await Friend.findById(req.params.id);
+    res.render('/allfriends', { title: 'All Friends', friends });
+  } catch (err) {
+    console.log(err);
+    res.redirect('/trips');
+  }
+}
+
 
 module.exports = {
   create,
-  getFriends
+  getFriends,
+  show
 };

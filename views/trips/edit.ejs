@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<form action="/trips/<%= trip.id %>?_method=PUT" method="POST">
+  <label>Country:</label>
+  <input type="text" name="name" value="<%= trip.name %>" required>
+  <label>From:</label>
+  <input type="date" name="from" value="<%= trip.from %>" required>
+  <label>To:</label>
+  <input type="date" name="to" value="<%= trip.to %>" required>
+  <label>Sites Visited:</label>
+  <input type="text" name="sites" value="<%= trip.sites %>" required>
+  <label>What I've learned:</label>
+  <input type="text" name="learn" value="<%= trip.learn %>" required>
+  <label>Picture:</label>
+  <input type="text" name="image" value="<%= trip.image %>" required>
+  <input type="submit" value="Edit Trip">
+</form>
+
+<%- include('../partials/footer') %>
