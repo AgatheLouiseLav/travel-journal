@@ -17,7 +17,9 @@
         <td><%= trip.name %></td>
         <td><%= trip.from.toLocaleDateString() %></td>
 		<td><%= trip.to.toLocaleDateString() %></td>
+    <% if (user) { %>
         <td><a href="/trips/<%= trip._id %>">DETAILS</a></td>
+    <% } %>
       </tr>
     <% }); %>
   </tbody>

@@ -6,16 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Travel Journal</title>
+  <link rel="icon" type="image/x-icon" src="../../public/images/Logo.png">
 </head>
 <body>
   <nav>
-	<a href="/">Login</a>
-	&nbsp
-	<a href="/">Home Page</a>
-	&nbsp
-  	<a href="/trips">All Trips</a>
-  &nbsp
+    <img src="../../public/images/Logo.png">
+	  <a href="/">Home Page</a>
+	  &nbsp
+    <a href="/trips">All Trips</a>
+    <% if (user) {%>
+    &nbsp
   	<a href="/trips/new">Add a Trip</a>
+    &nbsp
+  	<a href="/logout">Logout</a>
+    <% } else { %>
+    &nbsp
+    <a href="/auth/google">Login</a>
+    <% } %>
 </nav>
   <main>
     <h1><%= title %></h1>
