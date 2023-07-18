@@ -1,29 +1,26 @@
 <%- include('../partials/header') %>
 
-<h2>We got this!</h2>
+<h2>Places I’ve been 🗺️</h2>
+<br><br>
 
-<table id="list">
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th>From</th>
-      <th>To</th>
-	  <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% trips.forEach(function(trip) { %>
-      <tr>
-        <td><%= trip.name %></td>
-        <td><%= trip.from.toLocaleDateString() %></td>
-		<td><%= trip.to.toLocaleDateString() %></td>
+<div class="card-container">
+  <% trips.forEach(function(trip) { %>
     <% if (user) { %>
-        <td><a href="/trips/<%= trip._id %>">DETAILS</a></td>
+    <a href="/trips/<%= trip._id %>">
     <% } %>
-      </tr>
+      <div class="travel-card">
+        <img src="<%= trip.image %>" alt="<%= trip.name %> picture">
+        <h3><%= trip.name %></h3>
+          <div class="trip-date">
+            <p><span>From</span> <%= trip.from.toLocaleDateString() %></p>
+            <p><span>To</span> <%= trip.to.toLocaleDateString() %></p>
+          </div>
+      </div>
+      </a>
     <% }); %>
-  </tbody>
-</table>
+  </div>
+
+
 
 
 <%- include('../partials/footer') %>

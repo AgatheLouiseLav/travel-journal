@@ -11,13 +11,10 @@ body {
   background-color: #F8F1F1;
   display: flex;
   flex-direction: row;
-  border:3px solid blueviolet;
+  
 }
 
 /*NAVBAR*/
-nav{
-  border: green solid 2px;
-}
 .header-navbar{
   display: flex;
   flex-direction: column;
@@ -54,6 +51,7 @@ nav{
   border-top: orange 1px solid;
   padding: 25px;
 }
+
 .header-navbar a:last-child{
   border-bottom: orange 1px solid;
 }
@@ -61,11 +59,12 @@ nav{
 .header-navbar a:hover {
  background-color: #E8AA42;
  color:#025464;
-  transition: background-color 400ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 .header-navbar .icon{
   display: none;
+  font-size: 20px;
 }
 
 h1{
@@ -152,7 +151,71 @@ p{
 
 /*CONTAINER*/
 .container{
-  border: 2px solid red;
-  /*margin-left: 30%;*/
-  /*width: 65%;*/
+  /*border: 2px solid red;*/
+  margin-left: 20%;
+  padding: 50px;
+  width: 80%;
+  color:#025464;
 }
+
+.homepage h2{
+  margin-top: 160px;
+  font-size: 3vw;
+}
+.homepage p{
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 50px;
+}
+
+@media (max-width: 800px) {
+  .container{
+     margin-left: 0%;
+     padding: 100px 20px 10px 20px;
+     width: 100%;
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-container a{
+  text-decoration: none;
+  color: #025464;
+}
+
+.travel-card{
+  background-color: rgb(232,170,66, 0.3);
+  border: 2px solid #025464;
+  border-radius: 15px;
+  margin:20px;
+  width: 300px;
+  height: 350px;
+  gap:10px;
+  text-align: center;
+}
+
+.travel-card h3{
+  margin:10px;
+  font-size: 2vw;
+}
+
+.travel-card img{
+  width:296px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 13px 13px 0 0;
+}
+
+.trip-date{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.trip-date span{
+  font-weight: 700;
+}
+
