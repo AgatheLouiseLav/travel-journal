@@ -1,8 +1,158 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap');
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: #F8F1F1;
+  display: flex;
+  flex-direction: row;
+  border:3px solid blueviolet;
+}
+
+/*NAVBAR*/
+nav{
+  border: green solid 2px;
+}
+.header-navbar{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  width: 20%;
+  background-color: #025464;
+  position: fixed;
+  height: 100%;
+  color: orange;
+  padding: 50px 0 20px 0 ;
+}
+
+.navbar-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-top img{
+  width: 35px;
+}
+
+.navbar-center{
+  display: flex;
+  flex-direction: column;
+}
+
+.header-navbar a {
+  display: block;
+  font-size: 1.5vw;
+  color: orange;
+  text-decoration: none;
+  border-top: orange 1px solid;
+  padding: 25px;
+}
+.header-navbar a:last-child{
+  border-bottom: orange 1px solid;
+}
+
+.header-navbar a:hover {
+ background-color: #E8AA42;
+ color:#025464;
+  transition: background-color 400ms ease-in-out;
+}
+
+.header-navbar .icon{
+  display: none;
+}
+
+h1{
+  font-size: 1.8vw;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+
+p{
+  font-size: 1vw;
+}
+
+@media (max-width: 1000px) {
+  .navbar-top{
+    flex-direction: column;
+  }
+  .navbar-top h1{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-navbar{
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  height: auto;
+  color: orange;
+  padding: 0 0 0 10px;
+  }
+
+  .navbar-top{
+    flex-direction: row;
+  }
+
+  .navbar-top h1{
+    display: none;
+  }
+
+  .header-navbar p{
+    display: none;
+  }
+
+  .header-navbar a {
+  font-size: 2vw;
+  border-right: orange 1px solid;
+  border-top: none;
+  padding: 20px;
+  }
+
+  .header-navbar a:last-child{
+    border-bottom: none;
+    border-right: none;
+  }
+
+  .header-navbar a:first-child{
+  border-left: orange 1px solid;
+}
+
+  .navbar-center{
+    flex-direction: row;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .header-navbar .icon{
+  display: block;
+  }
+
+  .navbar-center{
+    display: none;
+  }
+
+  .icon{
+    border: none;
+  }
+
+}
+/*NAVBAR*/
+
+/*CONTAINER*/
+.container{
+  border: 2px solid red;
+  /*margin-left: 30%;*/
+  /*width: 65%;*/
 }
