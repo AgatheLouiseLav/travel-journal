@@ -1,25 +1,26 @@
 <%- include('../partials/header') %>
-
-<h2>Add a new Trip!</h2>
-
+<section class="add-trip">
+<h2>Add a Trip!</h2>
+<br><br>
 <form action="/trips" method="POST">
-  <label>Country:</label>
-  <input type="text" name="name">
-  <label>From:</label>
-  <input type="date" name="from">
-  <label>To:</label>
-  <input type="date" name="to">
-  <label>Sites Visited:</label>
-  <input type="text" name="sites">
-  <label>What I've learned:</label>
-  <input type="text" name="learn">
-  <label>Picture:</label>
-  <input type="text" name="image">
-  <input type="submit" value="Add Trip">
+  <input type="text" name="name" placeholder="Country">
+  <br><br>
+  <input type="date" name="from" placeholder="From">
+    <br><br>
+  <input type="date" name="to"  placeholder="To">
+    <br><br>
+  <input type="text" name="sites" placeholder="Sites">
+    <br><br>
+  <input type="text" name="learn" placeholder="What I've learned">
+    <br><br>
+  <input type="text" name="image" placeholder="Picture">
+    <br><br>
+  <button type="submit">Add Trip</button>
 </form>
 
 <p>
   <%= errorMsg %>
 </p>
 
+</section>
 <%- include('../partials/footer') %>

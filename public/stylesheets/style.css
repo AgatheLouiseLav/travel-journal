@@ -59,7 +59,7 @@ body {
 .header-navbar a:hover {
  background-color: #E8AA42;
  color:#025464;
-  transition: background-color 200ms ease-in-out;
+ transition: background-color 400ms ease-in-out;
 }
 
 .header-navbar .icon{
@@ -197,13 +197,19 @@ h2{
 
 .travel-card{
   background-color: rgb(232,170,66, 0.3);
-  border: 2px solid #025464;
+  border: 2px solid orange;
   border-radius: 15px;
   margin:20px;
   width: 300px;
   height: 350px;
   gap:10px;
   text-align: center;
+}
+
+.travel-card:hover{
+  transform: scale(1.1);
+  background-color: #E8AA42;
+  transition: 200ms ease-in-out;
 }
 
 .travel-card h3{
@@ -231,7 +237,7 @@ h2{
   display: flex;
   height:500px;
   background-color: rgb(232,170,66, 0.3);
-  border: 2px solid #025464;
+  border: 2px solid orange;
   border-radius: 15px;
 }
 
@@ -277,8 +283,9 @@ h2{
 
 .trip-action{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+
 
 .trip-action a,.trip-action button{
   cursor: pointer;
@@ -292,6 +299,27 @@ h2{
   font-weight: 500;
   font-size: 2vh;
   padding: 10px 35px;
+}
+
+.trip-action a:hover,.trip-action button:hover{
+  background-color: #025464;
+  border:1px #025464 solid;
+  transition: background-color 400ms ease-in-out;
+}
+
+@media (max-width: 1000px) {
+ .trip-right{
+  width:60%;
+}
+.trip-left{
+  width:40%;
+}
+  .trip-action{
+    flex-direction: column;
+  }
+  .trip-action a,.trip-action button{
+    margin-top:0;
+  }
 }
 
 .add-friends{
@@ -325,10 +353,58 @@ h2{
 }
 
 .add-friends form{
-  border: 2px solid red;
   min-width: 400px;
 }
 
-.add-friends form input[type=text]{
+.add-friends form input[type=text],.add-trip input[type=text],.add-trip input[type=date]{
   width:100%;
+  margin-top:10px;
+  border:2px orange solid;
+  background-color: rgb(255,165,0, 0.2);
+  color: #025464;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vh;
+  padding: 10px 35px;
+}
+::-webkit-input-placeholder { 
+  color: #025464;
+}
+.add-friends form div{
+  display: flex;
+  flex-direction: row;
+}
+.add-friends form button, .add-trip button{
+  width: 100%;
+  cursor: pointer;
+  margin-top:20px;
+  border:1px orange solid;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vh;
+  padding: 10px 35px;
+}
+
+.add-friends form button:hover, .add-trip button:hover{
+  background-color: #025464;
+  border:1px #025464 solid;
+  transition: background-color 400ms ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  .add-friends{
+    flex-direction: column;
+  }
+}
+.add-trip{
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 700px;
 }

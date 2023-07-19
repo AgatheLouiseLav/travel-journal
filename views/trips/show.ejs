@@ -57,14 +57,11 @@
 </div>
 <br><br>
   <form action="/trips/<%= trip._id %>/friends" method="POST">
-	<label>Friend:</label>
-	<input type="text" name="name">
+      <input type="text" name="name" placeholder="Name">
   <br>
-	<label>Email:</label>
-	<input type="text" name="email">
+	    <input type="text" name="email" placeholder="Email">
   <br>
-	<label>Picture:</label>
-	<input type="text" name="picture">
+	    <input type="text" name="picture" placeholder="Picture">
   <br>
 	<button type="submit">Add a friend</button>
 </form>
