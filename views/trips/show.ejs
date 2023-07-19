@@ -26,6 +26,7 @@
 
   <br><br>
     <div class="trip-action">
+      <% if (user?._id.equals(trip.user)) { %>
         <a href="/trips/<%= trip.id %>/edit">Update</a>
         <br><br>
         <form 
@@ -34,6 +35,12 @@
             >
             <button type="submit">Delete</button>
         </form>
+        <% } else {%>
+            <div class="trip-creator">
+              <img src=" <%= trip.userAvatar %>" alt="<%= trip.userName %> avatar" referrerpolicy="no-referrer">
+              <p> &nbsp <%= trip.userName %> </p>
+            </div>
+        <% }%>
     </div>
   </div>
   <div class="trip-right">

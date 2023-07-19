@@ -7,7 +7,14 @@ const countrySchema = new Schema({
 	to: {type:Date, required: true},
 	learn: {type:String, required: true},
 	image: {type: String, required: true},
-	sites: {type:String, required: true}
+	sites: {type:String, required: true},
+	user: {
+		type: Schema.Types.ObjectId,
+		ref:'User',
+		required: true
+	},
+	userName: String,
+	userAvatar: String
 }, {
   timestamps: true
 });

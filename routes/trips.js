@@ -1,28 +1,29 @@
 const express = require('express');
 const router = express.Router();
-
 const tripsCtrl = require('../controllers/trips');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
+
 
 // Show all trips
 router.get('/', tripsCtrl.index);
 
 // Create a trip
-router.get('/new', tripsCtrl.new);
+router.get('/new', ensureLoggedIn, tripsCtrl.new);
 
 // Show the detals of trip
 router.get('/:id', tripsCtrl.show);
 
 //Update trip
-router.put('/:id', tripsCtrl.update);
+router.put('/:id', ensureLoggedIn, tripsCtrl.update);
 
 //Edit trip
-router.get('/:id/edit', tripsCtrl.edit);
+router.get('/:id/edit', ensureLoggedIn, tripsCtrl.edit);
 
 // Save the new trip
-router.post('/', tripsCtrl.create);
+router.post('/', ensureLoggedIn, tripsCtrl.create);
 
 // Delete Trip by id
-router.delete('/:id', tripsCtrl.delete);
+router.delete('/:id',  ensureLoggedIn, tripsCtrl.delete);
 
 
 
