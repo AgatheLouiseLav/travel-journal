@@ -1,56 +1,62 @@
 <%- include('../partials/header') %>
 
-<section>
-  <div>Country </div>
-  <div><%= trip.name %></div>
+<section class="big-card-trip">
+  <div class="trip-left">
+    <a href="/trips">< Back</a>
+  <h1><%= trip.name %></h1>
   <br>
-  <div>From: </div>
-  <div><%= trip.from.toLocaleDateString() %></div>
+  <div class="trip-date-card">
+    <div>
+      <h4>From: &nbsp</h4>
+      <p> <%= trip.from.toLocaleDateString() %></p>
+    </div>
+    &nbsp
+    &nbsp
+    <div>
+      <h4>To: &nbsp </h4>
+      <p> <%= trip.to.toLocaleDateString() %></p>
+    </div>
+  </div>
   <br>
-  <div>To: </div>
-  <div><%= trip.to.toLocaleDateString() %></div>
+   <h4>Places I've been: </h4>
+  <p><%= trip.sites %></p>
   <br>
-   <div>To: </div>
-  <div><%= trip.sites %></div>
-  <br>
-  <div>What I've learned: </div>
-  <div><%= trip.learn %></div>
+  <h4>What I've learned: </h4>
+  <p><%= trip.learn %></p>
 
   <br><br>
-  <a href="/trips/<%= trip.id %>/edit">Edit Trip</a>
-  <br><br>
-  <form 
-      action="/trips/<%= trip.id %>?_method=DELETE" 
-      method="POST"
-      >
-      <button type="submit">Delete this Trip</button>
-  </form>
+    <div class="trip-action">
+        <a href="/trips/<%= trip.id %>/edit">Update</a>
+        <br><br>
+        <form 
+            action="/trips/<%= trip.id %>?_method=DELETE" 
+            method="POST"
+            >
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+  </div>
+  <div class="trip-right">
+      <img src="<%= trip.image %>" alt="<%= trip.name %> picture">
+  </div>
+
 </section>
 
 <br><br>
 
-<table>
+<section class="add-friends">
+  <div class="friend-page">
   <h3>Friends</h3>
-  <thead>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Picture</th>
-    </tr>
-  </thead>
-  <tbody >
-    <% friends.forEach(function(friend) { %>
-    <tr>
-      <td><%= friend.name %></td>
-      <td><%= friend.email %></td>
-      <td><%= friend.picture %></td>
-    </tr>
-     <% }) %>
-  </tbody>
-</table>
+      <% friends.forEach(function(friend) { %>
+      <div class="friend-info">
+      <img src="<%= friend.picture %>" alt="<%= friend.name %> picture">
+      <p><%= friend.name %></p>
+      <p><%= friend.email %></p>
+    </div>
+    <% }) %>
+</div>
 <br><br>
-
-<form action="/trips/<%= trip._id %>/friends" method="POST">
+  <form action="/trips/<%= trip._id %>/friends" method="POST">
 	<label>Friend:</label>
 	<input type="text" name="name">
   <br>
@@ -62,5 +68,6 @@
   <br>
 	<button type="submit">Add a friend</button>
 </form>
+</section>
 
 <%- include('../partials/footer') %>

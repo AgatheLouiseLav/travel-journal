@@ -159,13 +159,13 @@ p{
 }
 
 .homepage h2{
-  margin-top: 160px;
-  font-size: 3vw;
+  margin-top: 200px;
+  font-size: 2vw;
 }
 .homepage p{
   margin-top: 30px;
   font-weight: 400;
-  font-size: 2vw;
+  font-size: 1.5vw;
   line-height: 50px;
 }
 
@@ -175,6 +175,14 @@ p{
      padding: 100px 20px 10px 20px;
      width: 100%;
   }
+}
+
+.all-trips-section{
+  text-align: center;
+}
+
+h2{
+  font-size: 2vw;
 }
 
 .card-container{
@@ -219,3 +227,108 @@ p{
   font-weight: 700;
 }
 
+.big-card-trip{
+  display: flex;
+  height:500px;
+  background-color: rgb(232,170,66, 0.3);
+  border: 2px solid #025464;
+  border-radius: 15px;
+}
+
+.trip-right{
+  width:60%;
+}
+
+.trip-right img{
+    height:496px;
+    width: 100%;
+     object-fit: cover;
+    border-radius: 0 13px 13px 0;
+}
+
+.trip-left{
+  width: 40%;
+  padding: 50px;
+}
+
+.trip-left a{
+  text-decoration: none;
+  color:#025464;
+  font-size: 10px;
+}
+.trip-left h1{
+  margin-left: 0;
+  margin-top:15px;
+}
+
+.trip-date-card{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: left;
+}
+
+.trip-date-card div{
+  display: flex;
+}
+
+.trip-left p{
+  margin-bottom: 10px;
+}
+
+.trip-action{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.trip-action a,.trip-action button{
+  cursor: pointer;
+  margin-top:20px;
+  border:1px orange solid;
+  width: 130px;
+  background-color: orange;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2vh;
+  padding: 10px 35px;
+}
+
+.add-friends{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.friend-page{
+  min-width: 400px;
+}
+
+.friend-page h3{
+  margin: 10px;
+}
+
+.friend-page .friend-info {
+  border: 2px dotted orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin: 10px;
+   padding: 10px;
+}
+.friend-page .friend-info img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.add-friends form{
+  border: 2px solid red;
+  min-width: 400px;
+}
+
+.add-friends form input[type=text]{
+  width:100%;
+}
