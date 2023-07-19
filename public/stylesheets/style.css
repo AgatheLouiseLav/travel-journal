@@ -242,16 +242,19 @@ h2{
 }
 
 .trip-creator{
-  margin-top: 90px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .trip-creator img{
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
+}
+.trip-creator p{
+  margin-top:10px;
 }
 
 .trip-right{
@@ -369,7 +372,8 @@ h2{
   min-width: 400px;
 }
 
-.add-friends form input[type=text],.add-trip input[type=text],.add-trip input[type=date]{
+.add-friends form input[type=text],.add-trip input[type=text],.add-trip input[type=date],
+.edit-trip input[type=text],.edit-trip input[type=date]{
   width:100%;
   margin-top:10px;
   border:2px orange solid;
@@ -384,11 +388,11 @@ h2{
 ::-webkit-input-placeholder { 
   color: #025464;
 }
-.add-friends form div{
+/*.add-friends form div{
   display: flex;
   flex-direction: row;
-}
-.add-friends form button, .add-trip button{
+}*/
+.add-friends form button, .add-trip button, .edit-trip button{
   width: 100%;
   cursor: pointer;
   margin-top:20px;
@@ -402,7 +406,7 @@ h2{
   padding: 10px 35px;
 }
 
-.add-friends form button:hover, .add-trip button:hover{
+.add-friends form button:hover, .add-trip button:hover, .edit-trip button:hover{
   background-color: #025464;
   border:1px #025464 solid;
   transition: background-color 400ms ease-in-out;
@@ -413,7 +417,7 @@ h2{
     flex-direction: column;
   }
 }
-.add-trip{
+.add-trip, .edit-trip{
   text-align: center;
   margin: 0 auto;
   display: flex;
