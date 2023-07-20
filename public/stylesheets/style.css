@@ -14,7 +14,6 @@ body {
   
 }
 
-/*NAVBAR*/
 .header-navbar{
   display: flex;
   flex-direction: column;
@@ -45,7 +44,7 @@ body {
 
 .header-navbar a {
   display: block;
-  font-size: 1.5vw;
+  font-size: 20px;
   color: orange;
   text-decoration: none;
   border-top: orange 1px solid;
@@ -68,90 +67,16 @@ body {
 }
 
 h1{
-  font-size: 1.8vw;
+  font-size: 20px;
   letter-spacing: 2px;
   margin-left: 10px;
 }
 
 p{
-  font-size: 1vw;
+  font-size: 16px;
 }
 
-@media (max-width: 1000px) {
-  .navbar-top{
-    flex-direction: column;
-  }
-  .navbar-top h1{
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 800px) {
-  .header-navbar{
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: fixed;
-  height: auto;
-  color: orange;
-  padding: 0 0 0 10px;
-  }
-
-  .navbar-top{
-    flex-direction: row;
-  }
-
-  .navbar-top h1{
-    display: none;
-  }
-
-  .header-navbar p{
-    display: none;
-  }
-
-  .header-navbar a {
-  font-size: 2vw;
-  border-right: orange 1px solid;
-  border-top: none;
-  padding: 20px;
-  }
-
-  .header-navbar a:last-child{
-    border-bottom: none;
-    border-right: none;
-  }
-
-  .header-navbar a:first-child{
-  border-left: orange 1px solid;
-}
-
-  .navbar-center{
-    flex-direction: row;
-  }
-
-}
-
-@media (max-width: 650px) {
-  .header-navbar .icon{
-  display: block;
-  }
-
-  .navbar-center{
-    display: none;
-  }
-
-  .icon{
-    border: none;
-  }
-
-}
-/*NAVBAR*/
-
-/*CONTAINER*/
 .container{
-  /*border: 2px solid red;*/
   margin-left: 20%;
   padding: 50px;
   width: 80%;
@@ -160,21 +85,14 @@ p{
 
 .homepage h2{
   margin-top: 200px;
-  font-size: 2vw;
+  font-size: 20px;
 }
+
 .homepage p{
   margin-top: 30px;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 16px;
   line-height: 50px;
-}
-
-@media (max-width: 800px) {
-  .container{
-     margin-left: 0%;
-     padding: 100px 20px 10px 20px;
-     width: 100%;
-  }
 }
 
 .all-trips-section{
@@ -182,7 +100,7 @@ p{
 }
 
 h2{
-  font-size: 2vw;
+  font-size: 18px;
 }
 
 .card-container{
@@ -190,6 +108,7 @@ h2{
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .card-container a{
   text-decoration: none;
   color: #025464;
@@ -214,7 +133,7 @@ h2{
 
 .travel-card h3{
   margin:10px;
-  font-size: 2vw;
+  font-size: 18px;
 }
 
 .travel-card img{
@@ -242,7 +161,7 @@ h2{
 }
 
 .trip-creator{
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -253,12 +172,13 @@ h2{
   width: 40px;
   border-radius: 50%;
 }
+
 .trip-creator p{
   margin-top:10px;
 }
 
 .trip-right{
-  width:60%;
+  width:50%;
 }
 
 .trip-right img{
@@ -269,7 +189,7 @@ h2{
 }
 
 .trip-left{
-  width: 40%;
+  width: 50%;
   padding: 50px;
 }
 
@@ -278,13 +198,14 @@ h2{
   color:#025464;
   font-size: 10px;
 }
+
 .trip-left h1{
   margin-left: 0;
   margin-top:15px;
 }
 
 .trip-date-card{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: left;
 }
@@ -299,7 +220,7 @@ h2{
 
 .trip-action{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 
@@ -313,7 +234,7 @@ h2{
   border-radius: 15px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 16px;
   padding: 10px 35px;
 }
 
@@ -321,21 +242,6 @@ h2{
   background-color: #025464;
   border:1px #025464 solid;
   transition: background-color 400ms ease-in-out;
-}
-
-@media (max-width: 1000px) {
- .trip-right{
-  width:60%;
-}
-.trip-left{
-  width:40%;
-}
-  .trip-action{
-    flex-direction: column;
-  }
-  .trip-action a,.trip-action button{
-    margin-top:0;
-  }
 }
 
 .add-friends{
@@ -361,6 +267,7 @@ h2{
   margin: 10px;
   padding: 10px;
 }
+
 .friend-page .friend-info img{
   width: 35px;
   height: 35px;
@@ -370,6 +277,15 @@ h2{
 
 .add-friends form{
   min-width: 400px;
+}
+
+.add-trip, .edit-trip{
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 700px;
 }
 
 .add-friends form input[type=text],.add-trip input[type=text],.add-trip input[type=date],
@@ -382,16 +298,14 @@ h2{
   border-radius: 15px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 20px;
   padding: 10px 35px;
 }
+
 ::-webkit-input-placeholder { 
   color: #025464;
 }
-/*.add-friends form div{
-  display: flex;
-  flex-direction: row;
-}*/
+
 .add-friends form button, .add-trip button, .edit-trip button{
   width: 100%;
   cursor: pointer;
@@ -402,7 +316,7 @@ h2{
   border-radius: 15px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 2vh;
+  font-size: 18px;
   padding: 10px 35px;
 }
 
@@ -413,15 +327,110 @@ h2{
 }
 
 @media (max-width: 1000px) {
+    .navbar-top{
+    flex-direction: column;
+  }
+
+  .navbar-top h1{
+    margin-top: 10px;
+  }
+
   .add-friends{
     flex-direction: column;
   }
+
+   .trip-action{
+    flex-direction: column;
+  }
+
+  .trip-action a,.trip-action button{
+    margin:0;
+    width: 90px;
+    padding: 10px 20px;
+  }
 }
-.add-trip, .edit-trip{
+
+
+@media (max-width: 800px) {
+  .container{
+     margin-left: 0%;
+     padding: 100px 20px 10px 20px;
+     width: 100%;
+  }
+
+  .header-navbar{
+  flex-direction: row;
   text-align: center;
-  margin: 0 auto;
-  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  height: auto;
+  color: orange;
+  padding: 0 0 0 10px;
+  }
+
+  .navbar-top{
+    flex-direction: row;
+  }
+
+  .navbar-top h1{
+    display: none;
+  }
+
+  .header-navbar p{
+    display: none;
+  }
+
+  .header-navbar a {
+  font-size: 18px;
+  border-right: orange 1px solid;
+  border-top: none;
+  padding: 20px;
+  }
+
+  .header-navbar a:last-child{
+    border-bottom: none;
+    border-right: none;
+  }
+
+  .header-navbar a:first-child{
+  border-left: orange 1px solid;
+  }
+
+  .navbar-center{
+    flex-direction: row;
+  }
+
+   .trip-date-card{
   flex-direction: column;
-  min-width: 400px;
-  max-width: 700px;
+   margin-bottom: 5px;
+  }
+
+   .trip-action{
+    flex-direction: row;
+   }
+
+   .trip-right{
+    width: 40%;
+   }
+   
+   .trip-left{
+    width: 60%;
+   }
+}
+
+@media (max-width: 650px) {
+  .header-navbar .icon{
+  display: block;
+  }
+
+  .navbar-center{
+    display: none;
+  }
+  
+  .icon{
+    border: none;
+  }
+
 }

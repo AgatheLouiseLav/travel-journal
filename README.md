@@ -24,7 +24,7 @@ Travel-Journal is a CRUD application for travellers. It is made to keep travel e
 
 <a href="https://trello.com/b/Knhq0sT7/project-2-travel-journal">Link to my Trello</a>
 <a href="https://www.figma.com/file/EcdBYTQ5D5JVX8FhoIthK5/Travel-Journal?type=design&node-id=0-1&mode=design&t=UMej7w9khMET9suv-0">Link to my Figma</a>
-<a href="">Link to the App</a>
+<a href="https://fathomless-inlet-76834-317446e98998.herokuapp.com/">Link to the App</a>
 
 #Next Steps
 
